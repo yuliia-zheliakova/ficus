@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficus elastica 🪴</title>
+    <style>
+      body {
+        font-family: serif;
+      }
+      h1 {
+        font-family: cursive;
+        font-size: 34px;
+        margin: 0;
+        line-height: 48px;
+        padding-bottom: 5px;
+      }
+      h2 {
+        padding-right: 20px;
+        padding-bottom: 5px;
+        font-size: 29px;
+        margin: 0;
+        font-weight: normal;
+        line-height: 48px;
+      }
+      h3 {
+        font-size: 19px;
+        font-family: cursive;
+      }
+      a {
+        color: rgb(54, 79, 6);
+      }
+      p {
+        display: inline;
+        margin-left: 10px;
+      }
+      img {
+        padding: 10px;
+      }
+      button {
+        font-family: serif;
+        display: block;
+        margin: 20px auto;
+        border: 1px solid rgb(0, 102, 43);
+        background: radial-gradient(
+          circle at -1% 57.5%,
+          rgb(19, 170, 82) 0%,
+          rgb(0, 102, 43) 90%
+        );
+        color: #fff;
+        font-size: 19px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: white;
+        color: rgb(54, 79, 6);
+        border: 1px solid rgb(54, 79, 6);
+      }
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 30px 60px;
+        text-align: center;
+        font-weight: 200;
+        line-height: 2em;
+        border: 1px solid rgb(150, 150, 150);
+        border-radius: 30px;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      }
+      .accent {
+        color: #690;
+      }
+      .dev {
+        text-align: center;
+        font-family: monospace;
+        opacity: 0.7;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ficus elastica</h1>
+      <hr />
+      <p class="intro">
+        <strong>The Rubber Tree</strong> (<em>Ficus elastica</em>) is an easily
+        cared for ficus native to southern Asia. In their natural habitat, they
+        can grow up to <spam class="accent">200 feet tall</spam>!
+        <br />
+        <img
+          class="top"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/242/original/kisspng-rubber-fig-par-rubber-tree-houseplant-natural-ru-swainsona-formosa-5b08af2c1c88a9.7353731915272957881169.png?1671964847"
+          alt="The Rubber Tree"
+          width="200"
+        />
+      </p>
+      <br />
+      <hr />
+      <h2>Maintenance</h2>
+      <p>
+        🌱
+        <a href="https://en.wikipedia.org/wiki/Ficus_elastica">Rubber Trees</a>
+        are tolerant of lower light spaces, but their large, rich burgundy
+        leaves will fade to a
+        <span class="accent">lighter green color</span> without adequate light
+      </p>
+      <br />
+      <img
+        class="leaves"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/244/original/ficus_elastica.jpeg?1671965681"
+        alt="Its leaves"
+        width="300"
+      />
+      <hr />
+      <h3>
+        ✍🏻 Subscribe to our mailing list to receive a checklist of tips on
+        caring for your plant from botanical experts
+      </h3>
+      <button>Get care tips</button>
+      <footer class="dev">
+        Coded by 👩‍💻
+        <a
+          class="link"
+          href="https://www.linkedin.com/in/yuliia-zheliakova-006728219/"
+          >Yuliia Zheliakova</a
+        >
+      </footer>
+    </div>
+    <script>
+      function getTips() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email?");
+        let subscription = document.querySelector("h3");
+        if (name.length > 0 && email.length > 0) {
+          alert(
+            "Thanks for the subscription, " +
+              name +
+              " 🥰! We've sent our best tips on your email: " +
+              email
+          );
+          subscription.innerHTML = `Your subscription is successful   🎉`;
+          getButton.parentNode.removeChild(getButton);
+        } else {
+          subscription.innerHTML = `It seems that something went wrong   😔   Please try again!`;
+        }
+      }
+      let getButton = document.querySelector("button");
+      getButton.addEventListener("click", getTips);
+    </script>
+  </body>
+</html>
